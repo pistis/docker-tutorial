@@ -1,0 +1,7 @@
+FROM debian:buster-slim
+LABEL maintainer="pistis <vamalboro@gmail.com>"
+# install fortune
+COPY webpage.sh /
+RUN apt-get update \
+    && apt-get install -y fortune
+CMD ["/webpage.sh"]
